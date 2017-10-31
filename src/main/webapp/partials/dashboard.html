@@ -1,0 +1,266 @@
+
+<style>
+#datasetsTabContent table, #jobRunStatistics table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    text-align: left;
+}
+
+#datasetsTabContent tbody > tr , #datasetsTabContent thead > tr, #jobRunStatistics tbody > tr , #jobRunStatistics thead > tr {display:table;width:100%;}
+#datasetsTabContent tbody, #datasetsTabContent thead,#jobRunStatistics tbody, #jobRunStatistics thead{display: block;}
+#datasetsTabContent tbody,#jobRunStatistics tbody {
+    overflow-y: auto;
+    overflow-x: none;
+    max-height: 215px;
+    width: 100%
+}
+#jobRunStatistics tbody {
+	 max-height: 137px;
+}
+#datasetsTabContent ::-webkit-scrollbar,#jobRunStatistics ::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+#datasetsTabContent ::-webkit-scrollbar-track, #jobRunStatistics ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+#datasetsTabContent ::-webkit-scrollbar-thumb,#jobRunStatistics ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+#datasetsTabContent .btn-danger
+{
+	width:30px;
+}
+@media (min-width:1200px) and (max-width: 1400px) {
+	.datasetbox .col-lg-5, 
+	{
+		width: 33.33333333%;
+	}
+	.datasetbox .col-lg-3,
+	{
+		width: 33.33333333%;
+	}
+}
+</style>
+<section class="content-header"  >
+	<h1>
+	  {{translate('DASHBOARD','Dashboard')}}
+	</h1>
+	<ol class="breadcrumb">
+		<li class="active">{{translate('DASHBOARD','Dashboard')}}</li>
+	</ol>
+</section><!--END Content Header (Page header) -->
+<!-- Main content -->
+<section class="content dashboard">
+   <!-- Small boxes (Stat box) -->
+   <div class="row"  >
+	  <div class="col-lg-8 col-xs-8 col-mg-8 col-sm-8" style="height:30%;">
+		 <div class="box " style="margin-bottom:0px;">
+			<div class="box-header">
+			   <i class="fa fa-area-chart"></i>
+			   <h3 class="box-title">
+				  {{translate('DATA_AVAILABILITY_STATISTICS','Data Availability Statistics')}}
+			   </h3>
+			</div>
+			<div class=" no-padding" style="height: 178px;border:0px;">
+			   <div class="col-sm-12 " style="height: 178pxx;padding: 0px;border-right: 2px solid #ccc;">
+				  <div id="dataAvailabilityChart" style="height: 178px;"></div>
+			   </div>
+			</div>
+			<div style="position: relative; text-align: center;padding: 3px 0; color: rgba(255,255,255,0.8);display: block; z-index: 10;background: rgba(0,131,163,0.4);text-decoration: none;"> 
+			   <a href="#viewDataAvailability" class="small-box-footer">{{translate('MORE_INFO','More Info ')}}<i class="fa fa-arrow-circle-right"></i></a>
+			</div>
+		 </div>
+		 <!-- ./col -->
+	  </div>
+	  <div class="col-lg-4 col-xs-4 col-mg-4 col-sm-4" style="height:30%;padding-left:10px;">
+		 <div class="box " id="jobRunStatistics">
+			<div class="box-header with-border">
+			   <i class="fa fa-cubes"></i>
+			   <h3 class="box-title">{{translate('JOB_RUN_STATISTICS','Job Run Statistics')}}<small style="display:none;">{{translate('PENDING_EXECUTION','Pending Execution')}}</small></h3>
+			</div>
+			<!-- /.box-header -->
+			<div class="box-body no-padding" style="min-height:176px;">
+						<div class="table-responsive">
+							<table class="table no-margin">
+								<thead>
+									<tr>
+										<th class="col-sm-4" >{{translate('SOURCE','Source')}}</th>
+										<th class="col-sm-5" >{{translate('LAST_EXECUTED','Last Executed ')}}</th>
+										<th class="col-sm-3" >{{translate('STATUS','Status')}}</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="(key, value) in data.jobRunStatistics"  >
+									<td  class="col-sm-4" >
+										<a ng-click="redirect(value.subjectArea)" class="small-box-footer" ng-bind="value.subjectArea" ></a>
+									</td>
+									<td class="col-sm-5" ><span ng-bind="value.endTime" ></span></td>
+									<td  class="col-sm-3" >
+										{{value.status === 'Success' ?  "Executed": "Execution Pending "}}
+									</td>
+								 </tr>
+								</tbody>
+						   </table>
+						</div>
+					
+			</div>
+			<!-- /.box-body -->
+			<div style="position: relative; text-align: center;padding: 3px 0; color: rgba(255,255,255,0.8);display: block; z-index: 10;background: rgba(0,166,90,0.4);text-decoration: none;"> 
+			   <a href="#monitorDataFileStatus" class="small-box-footer">{{translate('MORE_INFO','More info ')}}<i class="fa fa-arrow-circle-right"></i></a>
+			</div>
+			<!-- /.box-footer -->
+		 </div>
+		 <!--/.box -->
+	  </div>
+	  <!-- ./col -->
+   </div><!-- ./row -->
+   <!-- /.row -->
+   <div class="row" style="margin:0px; " >
+	  <div class="col-sm-8" style="margin:0px; padding-left:0px;" >
+		 <!-- Chat box -->
+		 <div class="box DQReport">
+			<div class="box-header">
+			   <i class="fa fa-bar-chart-o"></i>
+			   <h3 class="box-title">{{translate('DATA_QUALITY_REPORT','Data Quality Report')}}
+			   </h3>
+			  <!--  <div class="input-append date" id="datepicker"   data-date-format="M-yyyy">
+				  <div class="input-group-addon" style="width: 37px;display: inline-block;">
+					 <i class="fa fa-calendar"></i>
+				  </div>
+				  <input  type="text" readonly="readonly" name="date"  style="margin-left: -3px;    padding: 0px 0px 4px 3px;">    
+				  <span class="add-on"><i class="icon-th"></i></span>      
+			   </div> -->
+			</div>
+			<div class="nav-tabs-custom" style="min-height:259px;margin-bottom:0px; ">
+			   <ul class="nav nav-tabs"  >
+				  <li ng-click="navTabClick('exceptionMangement',$event)" class="active"><a href="exceptionMangement" data-toggle="tab">{{translate('EXCEPTION_MANGEMENT','Exception Management')}}</a></li>
+				  <li ng-click="navTabClick('technicalIssues',$event)" ><a href="technicalIssues" data-toggle="tab">{{translate('TECHNICAL_ISSUES','Technical Issues')}}</a></li>
+				   <li ng-click="navTabClick('mappingIssues',$event)" ><a href="mappingIssues" data-toggle="tab">{{translate('MAPPING_ISSUES','Mapping Issues')}}</a></li>
+			   </ul>
+			<div class="tab-content dataIssuesSummaryTab" style="min-height: 262px;"> 
+				  <div class="active tab-pane" id="exceptionMangement">
+					 <div id="businessexception" style="height: 240px;"></div>
+				  </div>
+				  	<div class=" tab-pane" id="technicalIssues" >
+						 <div id="technicalIssuesChart" style="height: 240px;">
+						 </div>
+				  	</div>
+				  	<div class=" row tab-pane" id="mappingIssues" >
+						 <div class="col-md-6" style="min-height:220px;border-right:1px solid #ccc;">
+							<div id="CustmerText" style="">{{translate('CUSTOMER MAPPING','Customer Mapping: ')}} {{CustMappingOutOFText}} </div>
+							<!-- <div id="customerPer" style="">{{translate('CUSTOMER MAPPING PERCENTAGE','Mapping Percentage: ')}} {{totalCustMappingPercentage}}</div> -->
+							<div id="customerContainer" style="height:210px;position:absolute;"></div>
+						</div>
+						<div class="col-md-6" >
+							<div id="productText" style="">{{translate('PRODUCT MAPPING','Product Mapping: ')}} {{ProdMappingOutOFText}}</div>
+							<!-- <div id="prodPer" style=""> {{translate('PRODUCT MAPPING PERCENTAGE','Mapping Percentage: ')}} {{totalProdMappingPercentage}}</div> -->
+							<div id="ProductContainer" style="height:200px;position:absolute;"></div>
+						</div>
+					</div>
+			   </div> 
+			</div>
+			<div style="position: relative; text-align: center;padding: 3px 0; color: rgba(255,255,255,0.8);display: block; z-index: 10;background: rgba(0,131,163,0.4);text-decoration: none;"> 
+			   <a ng-click="redirectToDQReport()" class="small-box-footer">{{translate('MORE_INFO','More info ')}}<i class="fa fa-arrow-circle-right"></i></a>
+			</div>
+		 </div>
+	  </div>
+	  <div class="col-sm-4" style="margin:0px;padding-right:0px; " >
+		 <div class="box datasetbox">
+			<div class="box-header with-border">
+			   <i class="fa fa-database"></i>
+			   <h3 class="box-title">{{translate('DATASETS','Datasets')}}</h3>
+			   <button class="btn btn-primary pull-right" style="font-size: 13px;" title="{{translate('CREATE_DATASET','Create Dataset')}}" id="createDataSetBtn" ng-click="createDataSet()">{{translate('CREATE_DATASET','Create Dataset')}}</button>
+			</div>
+			<!-- /.box-header -->
+			<div id="datasetsTabContent" style="min-height:290px;">
+				
+				<!-- <ul class="nav nav-tabs">
+					<button class="btn btn-primary pull-right" style="margin-right:5px;margin-top: 5px;font-size: 13px;" id="createDataSetBtn" ng-click="createDataSet()">Create Dataset</button>
+					<li class="active" ng-click="navTabClick('EYNTK_DATASET',$event)" ><a href="EYNTK_DATASET" data-toggle="tab">EYNTK</a></li>
+					<li ng-click="navTabClick('OPSO_DATASET',$event)" ><a href="OPSO_DATASET" data-toggle="tab">OPSO</a></li>
+				</ul> -->
+				<!-- <div class="tab-content" style="min-height:259px;" id="datasetsTabContent" >
+					<div class="active tab-pane" id="EYNTK_DATASET" > -->
+					
+						<div class="box-body" >
+						<div class="table-responsive">
+							<table class="table no-margin">
+								<thead>
+								 <tr  >
+									<th class="col-xs-4 col-sm-4 col-md-4 col-lg-4" >{{translate('DATASET_NAME','Dataset Name')}}</th>
+									<th class="col-xs-4 col-sm-4 col-md-4 col-lg-5" style="padding-left: 0px;">{{translate('CREATED_BY','Created By')}}</th>
+									<th class="col-xs-4 col-sm-4 col-md-4 col-lg-3" style="padding-left: 0px;">{{translate('ACTION','Action')}}</th>
+								 </tr>
+							  </thead>
+							  <tbody>
+								 <tr  id="row_{{value.datasetId}}" ng-repeat="value in data.datasets| orderBy : createdDate : true" >
+									<td class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+										<a ng-click="redirectFromDataSetsWithName(value.datasetId,'EYNTK')" class="small-box-footer wrapword" ng-bind="value.datasetName" ></a>
+									</td>
+									<td class="col-xs-4 col-sm-4 col-md-4 col-lg-5" ><span class="wrapword">{{ value.createdBy || " "}}</span></td>
+									<td class="col-xs-4 col-sm-4 col-md-4 col-lg-3">
+										<button ng-if=" value.createdBy == data.currentUser" type="button" ng-click="deleteDataset(value.datasetId)" id="deleteDataset_{{value.datasetId}}"  class="btn btn-danger btn-simple btn-xs datasetDelete" title="{{translate('DELETE','Delete')}}">
+											<i class="fa  fa-times"></i>
+										</button>
+										<button  ng-if=" value.createdBy != data.currentUser" type="button" id="deleteDataset_value.datasetId"  class="btn btn-warning btn-simple btn-xs" title="{{translate('DONT_HAVE_PERMISSION_TO_DELETE','Don\'t have permission to delete.')}}">
+											<i class="fa fa-warning"></i>
+										</button>
+										<button type="button" rel="tooltip"  ng-click="exportDataset(value.datasetId)" class="btn btn-info btn-simple btn-xs" title="{{translate('DOWNLOAD','Download')}}" >
+											<i class="fa  fa-download"></i>
+										</button>
+									</td>
+									<td  style="display:none;" >{{formatDate(value.createdDate) |  date:'dd/MM/yyyy h:m:s'}}</td>
+								 </tr>
+								</tbody>
+						   </table>
+						</div>
+					 </div>
+				 <!--  </div>
+				  <div class=" tab-pane" id="OPSO_DATASET">
+					 <div class="box-body">
+						<div class="table-responsive">
+							<table class="table no-margin">
+								<thead>
+									<tr  >
+										<th class="col-xs-4 col-sm-4 col-md-4 col-lg-4" >Dataset Name</th>
+										<th class="col-xs-4 col-sm-4 col-md-4 col-lg-5" style="padding-left: 0px;">Created By</th>
+										<th class="col-xs-4 col-sm-4 col-md-4 col-lg-3" style="padding-left: 0px;">Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr id="row_{{value.datasetId}}" ng-repeat="value in data.datasets| orderBy : createdDate " ng-if="value.datasetType =='OPSO'" >
+									<td  class=" col-xs-4 col-sm-4 col-md-4 col-lg-4" >
+										<a ng-click="redirectFromDataSetsWithName(value.datasetId,'OPSO')" class="small-box-footer wrapword" ng-bind="value.datasetName" ></a>
+									</td>
+									<td class="col-xs-4 col-sm-4 col-md-4 col-lg-5" ><span class="wrapword">{{ value.createdBy || " "}}</span></td>
+									<td  class="col-xs-4 col-sm-4 col-md-4 col-lg-3" >
+										<button ng-if=" value.createdBy  == data.currentUser" type="button" rel="tooltip"  ng-click="deleteDataset(value.datasetId)" id="deleteDataset_{{value.datasetId}}"  class="btn btn-danger btn-simple btn-xs datasetDelete" data-toggle="tooltip" tooltip-title="Delete" data-placement="top" data-title="Delete" data-original-title="" title="">
+											<i class="fa  fa-times"></i>
+										</button>
+										<button  ng-if=" value.createdBy  != data.currentUser" type="button" rel="tooltip" id="deleteDataset_value.datasetId"  class="btn btn-warning btn-simple btn-xs" data-toggle="tooltip" tooltip-title="Don't have permission to delete." data-placement="top" data-title="Don't have permission to delete." data-original-title="" title="">
+											<i class="fa fa-warning"></i>
+										</button>
+										<button type="button" rel="tooltip"  ng-click="exportDataset(value.datasetId)" class="btn btn-info btn-simple btn-xs"  data-toggle="tooltip" tooltip-title="Download" data-title="Download" data-placement="top" data-original-title="" title="" >
+											<i class="fa  fa-download"></i>
+										</button>
+									</td>
+									<td  style="display:none;" >{{formatDate(value.createdDate) |  date:'dd/MM/yyyy h:m:s'}}</td>
+								 </tr>
+								</tbody>
+						   </table>
+						</div>
+					</div>
+					</div>
+				</div> -->
+				</div>
+			<div ng-click="redirectToDataSets()" style="position: relative; text-align: center;padding: 3px 0; color: rgba(255,255,255,0.8);display: block; z-index: 10;background: rgba(0,166,90,0.4);text-decoration: none;"> 
+			   <a class="small-box-footer">{{translate('MORE_INFO','More info ')}}<i class="fa fa-arrow-circle-right"></i></a>
+			</div>
+		</div>
+		</div>
+	</div>

@@ -1,0 +1,157 @@
+<section class="content-header">
+	<h1>{{translate('USER_PROFILE','User Profile')}}
+	</h1>
+	<ol class="breadcrumb">
+		<li>{{translate('USER_PROFILE','User Profile')}}</li>
+	</ol>
+</section>
+<div class="content userProfile">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-10">
+				<div class="card  box box-primary">
+					<div class="header">
+						<h4 class="title">{{translate('EDIT_PROFILE','Edit Profile')}}</h4>
+					</div>
+					<div class="content">
+						<form id = "user" action="javascript:;" enctype="multipart/form-data" method="post" name="userForm" novalidate>
+							<div class="row">
+								<div class="col-md-9 ">
+									<div class="row">
+										<div class="col-md-5">
+											<div class="form-group" ng-class="{ 'has-error' : userForm.company.$invalid}">
+												<label>{{translate('COMPANY','Company')}}</label>
+												<input type="text" class="form-control"placeholder="Company" ng-model="data.company" name="company" ng-maxlength="100">
+												<p ng-show="userForm.company.$error.maxlength" class="help-block">{{translate('COMPANY_IS_TOO_LONG','Company is too long')}}</p>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group" ng-class="{ 'has-error' : userForm.userName.$invalid && !userForm.userName.$pristine}">
+												<label>{{translate('USERNAME_*','Username *')}}</label>
+												<input type="text" class="form-control" placeholder="Username" ng-model="data.userName" name="userName" required readonly>
+												<p ng-show="userForm.userName.$invalid && !userForm.userName.$pristine" class="help-block">{{translate('USERNAME_IS_REQUIRED','Username is required.')}}</p> 
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group" ng-class="{ 'has-error' : userForm.emailAddress.$invalid && !userForm.emailAddress.$pristine }">
+												<label for="exampleInputEmail1">{{translate('EMAIL_ADDRESS','Email address')}}</label>
+												<input type="email" class="form-control" placeholder="Email" ng-model="data.emailAddress" name="emailAddress" ng-pattern="/^[_a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,4})$/">
+												<p ng-show="userForm.emailAddress.$error.pattern && !userForm.emailAddress.$pristine" class="help-block">{{translate('ENTER_A_VALID_EMAIL','Enter a valid email')}}</p>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group" ng-class="{ 'has-error' : userForm.firstName.$invalid && !userForm.firstName.$pristine}">
+												<label>{{translate('FIRST_NAME_*','First Name *')}}</label>
+												<input type="text" class="form-control" placeholder="First Name" ng-model="data.firstName" name="firstName" required ng-maxlength="20">
+												<p ng-show="userForm.firstName.$error.required && !userForm.firstName.$pristine" class="help-block">{{translate('FIRSTNAME_IS_REQUIRED.','Firstname is required.')}}</p>
+												<p ng-show="userForm.firstName.$error.maxlength" class="help-block">{{translate('FIRSTNAME_IS_TOO_LONG','Firstname is too long')}}</p> 
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group" ng-class="{ 'has-error' : userForm.lastName.$invalid && !userForm.lastName.$pristine}">
+												<label>{{translate('LAST_NAME_*','Last Name *')}}</label>
+												<input type="text" class="form-control" placeholder="Last Name" ng-model="data.lastName" name="lastName" required ng-maxlength="20">
+												<p ng-show="userForm.lastName.$error.required && !userForm.lastName.$pristine" class="help-block">{{translate('LASTNAME_IS_REQUIRED','Lastname is required.')}}</p>
+												<p ng-show="userForm.lastName.$error.maxlength" class="help-block">{{translate('LASTNAME_IS_TOO_LONG','Lastname is too long')}}</p> 
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group" ng-class="{ 'has-error' : userForm.address.$invalid}">
+												<label>{{translate('ADDRESS','Address')}}</label>
+												<textarea rows="3" class="form-control" placeholder="Home Address" ng-model="data.address" name="address" ng-maxlength="100"></textarea>
+												<p ng-show="userForm.address.$error.maxlength" class="help-block">{{translate('ADDRESS_IS_TOO_LONG','Address is too long')}}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="card card-user">
+										<div class="content" style="padding-left:0px;">
+											<div class="author">
+													<!-- <img class="avatar border-gray" src="dist/img/user2-160x160.jpg" alt="" width="140px"/ > -->
+													<img id="image_upload_preview"  src="" alt="" width="140px"/> 
+													<h4 class="title">{{data.firstName}} {{data.lastName}}<br />
+													</h4>
+												<div class="fileUpload btn btn-primary">
+													<span>{{translate('UPLOAD_PHOTO','UPLOAD PHOTO')}}</span> 
+													<input type="file" id="uploadPhoto" name="photo" class="upload" accept="image/*"/>
+													<span class='upload' id="upload-file-info" style="display:none"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group" ng-class="{ 'has-error' : userForm.city.$invalid}">
+										<label>{{translate('CITY','City')}}</label>
+										<input type="text" class="form-control" placeholder="City" ng-model="data.city" name="city" ng-maxlength="50">
+										<p ng-show="userForm.city.$error.maxlength" class="help-block">{{translate('CITY_IS_TOO_LONG','City is too long')}}</p>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group" ng-class="{ 'has-error' : userForm.country.$invalid}">
+										<label>{{translate('COUNTRY','Country')}}</label>
+										<input type="text" class="form-control" placeholder="Country" ng-model="data.country" name="country" ng-maxlength="50">
+										<p ng-show="userForm.country.$error.maxlength" class="help-block">{{translate('COUNTRY_IS_TOO_LONG','Country is too long')}}</p>
+									</div>
+								</div>
+								<!-- <div class="col-md-4">
+									<div class="form-group" ng-class="{ 'has-error' : userForm.postalCode.$invalid}">
+										<label>Postal Code</label>
+										<input type="text" class="form-control" placeholder="ZIP Code" ng-model="data.postalCode" name="postalCode" ng-maxlength="10">
+										<p ng-show="userForm.postalCode.$error.maxlength" class="help-block">Postal Code is too long</p>
+									</div>
+								</div> -->
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group" ng-class="{ 'has-error' : userForm.language.$invalid}">
+										<label>{{translate('LANGUAGE','Language')}}</label>
+										<!-- <input type="text" class="form-control" placeholder="Language" ng-model="data.language" name="language" ng-maxlength="50"> -->
+										<select class="form-control" placeholder="Language" ng-model="data.language" name="language" style="width:100%">
+								  			<option value="en" selected="selected">English</option>
+								  		</select>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group" ng-class="{ 'has-error' : userForm.dateFormat.$invalid}">
+										<label>{{translate('DATE_FORMAT','Date Format')}}</label>
+										<!-- <input type="text" class="form-control" placeholder="Date Format" ng-model="data.dateFormat" name="dateFormat" ng-maxlength="50"> -->
+										<select class="form-control" placeholder="Date Format" ng-model="data.dateFormat" name="dateFormat" size="1" style="width:100%">
+									  		<option value="dd-MMM-yyyy::DD-MMM-YYYY" selected="selected">dd-MMM-yyyy</option>
+									  		<option value="dd MMM yyyy::DD MMM YYYY">dd MMM yyyy</option>
+									  		<option value="dd/MM/yyyy::DD/MM/YYYY">dd/MM/yyyy</option>
+									  		<option value="yyyy/MM/dd::YYYY/MM/DD">yyyy/MM/dd</option>
+									  		<option value="MM/dd/yyyy::MM/DD/YYYY">MM/dd/yyyy</option>
+								  		</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group" ng-class="{ 'has-error' : userForm.aboutMe.$invalid}">
+										<label>{{translate('ABOUT_ME','About Me')}}</label>
+										<textarea rows="5" class="form-control" placeholder="Here can be your description" ng-model="data.aboutMe" name="aboutMe" ng-maxlength="700"></textarea>
+										<p ng-show="userForm.aboutMe.$error.maxlength" class="help-block">{{translate('ABOUT_ME_IS_TOO_LONG','About Me is too long')}}</p>
+									</div>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary btn-fill pull-right" ng-disabled="userForm.$invalid" style="margin-bottom:10px;">{{translate('UPDATE_PROFILE','Update Profile')}}</button>
+							<div class="clearfix"></div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+	</div>
+</div>

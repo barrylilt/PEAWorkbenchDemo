@@ -1,0 +1,53 @@
+{
+		"EYNTK": [{
+			"month": "Jun 16",
+			"clean": 110,
+			"action": 40
+		}, {
+			"month": "Jul 16",
+			"clean": 102,
+			"action": 39
+		}, {
+			"month": "Aug 16",
+			"clean": 100,
+			"action": 56
+		}, {
+			"month": "Sep 16",
+			"clean": 50,
+			"action": 29
+		}, {
+			"month": "Oct 16",
+			"clean": 91,
+			"action": 10
+		}, {
+			"month": "Nov 16",
+			"clean": 36,
+			"action": 34
+		}],
+		"OPSO": [{
+			"month": "Jun 16",
+			"clean": 82,
+			"action": 36
+		}, {
+			"month": "May 16",
+			"clean": 99,
+			"action": 49
+		}, {
+			"month": "Apr 16",
+			"clean": 111,
+			"action": 22
+		}, {
+			"month": "Mar 16",
+			"clean": 76,
+			"action": 14
+		}, {
+			"month": "Feb 16",
+			"clean": 67,
+			"action": 56
+		}, {
+			"month": "Jan 16",
+			"clean": 120,
+			"action": 24
+		}]
+
+	}

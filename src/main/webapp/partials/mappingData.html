@@ -1,0 +1,176 @@
+<link rel="stylesheet" href="dist/css/steps.css">
+<style>
+#selectMapProduct>tbody>tr>td {
+	padding: 4px 8px !important;
+}
+ul[role=menu]{
+	margin-right: 108px;
+	margin-top: 19px;
+}
+ul[role=menu] [role=menuitem]{
+	height: 30px;
+	padding-top: 6px;
+	font-size: 12px;
+}
+.knob{
+	font-size: 11px !important;
+}
+.stepBtn{
+	float: right;
+	margin-top: 3px;
+}
+.bootstrap-dialog-footer-buttons{
+	height:30px;
+}
+
+.stepContainer{
+	height: 335px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    margin-top:36px;
+}
+.matchedProduct{
+	margin-right:4px !important;
+}
+
+#selectMapProduct_wrapper .row:first-child{
+	margin:0px;
+}
+#dercentageDiv{
+	height:210px;
+	overflow-y:auto;
+}
+#selectMapProduct>tbody::-webkit-scrollbar,#sumProduct::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+#selectMapProduct>tbody::-webkit-scrollbar-track, #sumProduct::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+#selectMapProduct>tbody::-webkit-scrollbar-thumb, #sumProduct::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.tableHeader{
+	text-align: center;
+	vertical-align: middle;
+	border-bottom: 1px solid #F4F4F4 !important;
+}
+.percentageInput{
+	width:65px;
+	    display: inline-block;
+}
+#actionTd{
+	width:185px;
+}
+#selectMapProduct tbody,#selectMapProduct  thead tr { display: block; }
+
+#selectMapProduct tbody {
+    height: 165px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#selectMapProduct tbody td, #selectMapProduct thead th {
+    width: 260px;
+}
+.modal-body {
+	height: 400px;
+}
+#percentageError{
+	color:red;
+}
+#totalPercentage{
+	float:right;
+}
+/* #mappingDataTable>tbody>tr>td{
+vertical-align: middle !important;
+}  */
+#selectedNielsenProduct{
+    margin-left: 15px;
+    font-size: 16px;
+}
+#selectMapProduct .ms-parent { 
+	width:220px !important;
+	position: absolute;
+}
+
+.percentageInput{
+	padding:6px;
+}
+</style>
+
+<!-- Content Header (Page header) -->
+<section class="content-header exportDatasets">
+	<h1>
+		{{translate('HARMONIZE_DATA','Harmonize Data')}}
+		<!-- <small>Control panel</small> -->
+	</h1>
+	<ol class="breadcrumb">
+		<li>{{translate('MANAGE_DATA','Manage Data')}}</li>
+		<li class="active">{{translate('HARMONIZE_DATA','Harmonize Data')}}</li>
+	</ol>
+</section>
+<!-- Main content -->
+<section class="content">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-primary">
+				<div class="box-header with-border">
+					<h3 class="box-title">{{translate('DATA_FILTER','Data Filter')}}</h3>
+					<div class="box-tools pull-right">
+						<button class="btn btn-primary" ng-click="export()">{{translate('EXPORT','Export')}}</button>
+						<button class="btn btn-primary" ng-click="applyFilter()">{{translate('APPLY_FILTER','Apply Filter')}}</button>
+						<button class="btn btn-box-tool" data-widget="collapse">
+							<i class="fa fa-minus"></i>
+						</button>
+					</div>
+					<!-- /.box-tools -->
+				</div>
+				<!-- /.box-header -->
+				<div class="box-body">
+					<div class="row">
+						<div class="col-md-12 " >
+							<div class="col-md-2">
+								<label><input type="radio" name="mappingType" class="minimal" value="mapped" >&nbsp; {{translate('MAPPED','Mapped')}}</label><br/>
+								<label><input type="radio" name="mappingType" class="minimal" value="unmapped" checked >&nbsp; {{translate('UNMAPPED','Unmapped')}}</label>
+							</div>
+							<div class="col-md-3 form-group">
+								<label for="dataset">{{translate('SELECT_SOURCE','Select Source')}}</label> 
+								<select id="mappingDataSourceSelect" class="" size="2" multiple="multiple" style="width: 100%;"></select>
+							</div>
+							<div class="col-md-3 form-group">
+								<label>{{translate('SELECT_DIMENSION','Select Dimension')}}</label> 
+								<select id="mappingDataDimensionSelect" class="" size="2" multiple="multiple" style="width: 100%;"></select>
+							</div>
+							<div class="col-md-3 form-group">
+								<label>{{translate('SELECT_CATEGORY','Select Category')}}</label> 
+								<select id="mappingDataCategoriesSelect" class="" size="2" multiple="multiple" style="width: 100%;"></select>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<!-- /.box-body -->
+			</div>
+			<!-- /.box -->
+		</div>
+		<!-- /.col -->
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-primary customer" >
+				<div class="box-body" id="CustMappingData">
+				</div>
+			</div>
+			<div class="box box-primary product">
+				<div class="box-body" id="MappingData">
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>

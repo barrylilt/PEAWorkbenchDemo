@@ -1,0 +1,273 @@
+[{
+	"name": "Product",
+	"children": [{
+			"name": "DOVE BAR 2X100G EX-SENS",
+			"children": [{
+					"name": "HPC CATEGORY (RL1)",
+					"children": [{
+							"name": "PERSONAL CARE (RL2)",
+							"children": [{
+								"name": "SKIN (RL3",
+								"children": [{
+									"name": "SKIN CLEANSING (RL4)",
+									"children": [{
+										"name": "SKIN CLEANSING (RL5)",
+										"children": [{
+											"name": "SKIN CLEANSING BAR (RL6)",
+											"children": [{
+												"name": "SKIN CLEANSING BAR (RL7)",
+												"children": [{
+													"name": "SKIN CLEANSING BAR (RL8)",
+													"children": [{
+														"name": "SKIN CLEANSING BAR (RL9)",
+														"children": [{
+															"name": "SKIN CLEANSING BAR (RL10)",
+															"children": [{
+																"name": "DOVE E BAR SOAP (RL11)",
+																"children": [{
+																	"name": "DOVE BAR SOAP WRA200G (RL12)",
+																	"children": [{
+																		"name": "DOVE BAR SOAP SENSITIVE 200G (RL13)"
+																	}]
+																}]
+															}]
+														}]
+
+													}]
+												}]
+											}]
+										}]
+									}]
+								}]
+							}]
+
+						}
+
+					]
+				}, {
+					"name": "HPC CATEGORY1 (RL1)",
+					"children": [{
+							"name": "PERSONAL CARE1 (RL2)",
+							"children": [{
+								"name": "SKIN (RL3)",
+								"children": [{
+									"name": "SKIN CLEANSING (RL4)",
+									"children": [{
+										"name": "SKIN CLEANSING (RL5)",
+										"children": [{
+											"name": "SKIN CLEANSING BAR (RL6)",
+											"children": [{
+												"name": "SKIN CLEANSING BAR (RL7)",
+												"children": [{
+													"name": "SKIN CLEANSING BAR (RL8)",
+													"children": [{
+														"name": "SKIN CLEANSING BAR (RL9)",
+														"children": [{
+															"name": "SKIN CLEANSING BAR (RL10)",
+															"children": [{
+																"name": "DOVE E BAR SOAP (RL11)",
+																"children": [{
+																	"name": "DOVE BAR SOAP WRA200G (RL12)",
+																	"children": [{
+																		"name": "DOVE BAR SOAP SENSITIVE 200G (RL13)"
+																	}]
+																}]
+															}]
+														}]
+
+													}]
+												}]
+											}]
+										}]
+									}]
+								}]
+							}]
+
+						}
+
+					]
+				}
+
+			]
+		}, {
+			"name": "DOVE BAR 50G CREAM SUPREME SILK",
+			"children": [{
+					"name": "HPC CATEGORY (RL1)",
+					"children": [{
+							"name": "PERSONAL CARE (RL2)",
+							"children": [{
+								"name": "SKIN (RL3",
+								"children": [{
+									"name": "SKIN CLEANSING (RL4)",
+									"children": [{
+										"name": "SKIN CLEANSING (RL5)",
+										"children": [{
+											"name": "SKIN CLEANSING BAR (RL6)",
+											"children": [{
+												"name": "SKIN CLEANSING BAR (RL7)",
+												"children": [{
+													"name": "SKIN CLEANSING BAR (RL8)",
+													"children": [{
+														"name": "SKIN CLEANSING BAR (RL9)",
+														"children": [{
+															"name": "SKIN CLEANSING BAR (RL10)",
+															"children": [{
+																"name": "DOVE E BAR SOAP (RL11)",
+																"children": [{
+																	"name": "DOVE BARSOAP BAR 50G (RL12)",
+																	"children": [{
+																		"name": "DOVE BARSOAP SILK 50G (RL13)"
+																	}]
+																}]
+															}]
+														}]
+
+													}]
+												}]
+											}]
+										}]
+									}]
+								}]
+							}]
+
+						}, {
+							"name": "PERSONAL CARE1 (RL2)",
+							"children": [{
+								"name": "SKIN (RL3)",
+								"children": [{
+									"name": "SKIN CLEANSING (RL4)",
+									"children": [{
+										"name": "SKIN CLEANSING (RL5)",
+										"children": [{
+											"name": "SKIN CLEANSING BAR (RL6)",
+											"children": [{
+												"name": "SKIN CLEANSING BAR (RL7)",
+												"children": [{
+													"name": "SKIN CLEANSING BAR (RL8)",
+													"children": [{
+														"name": "SKIN CLEANSING BAR (RL9)",
+														"children": [{
+															"name": "SKIN CLEANSING BAR (RL10)",
+															"children": [{
+																"name": "DOVE E BAR SOAP (RL11)",
+																"children": [{
+																	"name": "DOVE BARSOAP BAR 50G (RL12)",
+																	"children": [{
+																		"name": "DOVE BARSOAP SILK 50G (RL13)"
+																	}]
+																}]
+															}]
+														}]
+
+													}]
+												}]
+											}]
+										}]
+									}]
+								}]
+							}]
+
+						}
+
+					]
+				}
+
+			]
+		}, {
+			"name": "LYNX S/GEL 50ML DARK TEMPTATION",
+			"children": [{
+				"name": "HPC CATEGORY (RL1)",
+				"children": [{
+						"name": "PERSONAL CARE (RL2)",
+						"children": [{
+							"name": "SKIN (RL3",
+							"children": [{
+								"name": "SKIN CLEANSING (RL4)",
+								"children": [{
+									"name": "SKIN CLEANSING (RL5)",
+									"children": [{
+										"name": "SHOWER (RL6)",
+										"children": [{
+											"name": "SHOWER (RL7)",
+											"children": [{
+												"name": "SHOWER (RL8)",
+												"children": [{
+													"name": "LIQUID (RL9)",
+													"children": [{
+														"name": "LIQUID (RL10)",
+														"children": [{
+															"name": "LYNX E SHOW LIQ (RL11)",
+															"children": [{
+																"name": "LYNX SHLIQ BOT50ML (RL12)",
+																"children": [{
+																	"name": "LYNX SHOWER LIQUID DARK TEMPTA (RL13)"
+																}]
+															}]
+														}]
+													}]
+
+												}]
+											}]
+										}]
+									}]
+								}]
+							}]
+						}]
+
+					}
+
+				]
+			}]
+		}, {
+			"name": "Colmans RecMix Sach ChickenSuprem24x40g",
+			"children": [{
+					"name": "FOODS CATEGORY (RL1)",
+					"children": [{
+							"name": "FOOD (RL2)",
+							"children": [{
+								"name": "FOODS EXCL SPREADS (RL3)",
+								"children": [{
+									"name": "SAVOURY (RL4)",
+									"children": [{
+										"name": "MEAL SOLUTIONS (RL5)",
+										"children": [{
+											"name": "MEALMAKERS (RL6)",
+											"children": [{
+												"name": "MEALMAKERS OTHER (RL7)",
+												"children": [{
+													"name": "MEALMAKERS OTHER (RL8)",
+													"children": [{
+														"name": "MEALMAKERS OTHER (RL9)",
+														"children": [{
+															"name": "MEALMAKERS OTHER (RL10)",
+															"children": [{
+																"name": "COLMANS (RL11)",
+																"children": [{
+																	"name": "COLMANS 40G POUCH (RL12)",
+																	"children": [{
+																		"name": "COLMANS 40G POUCH CHICKEN SUPR (RL13)"
+																	}]
+																}]
+															}]
+														}]
+
+													}]
+												}]
+											}]
+										}]
+									}]
+								}]
+							}]
+
+						}
+
+					]
+				}
+
+			]
+		}
+
+
+
+	]
+}]

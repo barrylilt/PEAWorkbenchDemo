@@ -1,0 +1,46 @@
+<script>
+	function openHelp(){
+		var strWindowFeatures = "location=yes,height=570,width=520,scrollbars=yes,status=yes";
+		var contentPath = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '')+$("#contextPath").val()+"/help/help.html";
+		window.open(contentPath,"_blank",strWindowFeatures);
+	}
+</script>
+
+<header class="main-header">
+  <!-- Logo -->
+  <a href="#" class="logo" style="padding:0px;">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+    <span class="logo-mini"><img src="images/unilever-logo_sm.png"  alt="Logo" style="width: 50px; height: 50px; "></span>
+    <!-- logo for regular state and mobile devices -->
+    <span class="logo-lg"><img src="images/unilever-logo_sm.png" class="pull-left" style="width: 50px; height: 50px;" alt="logo">PEA Workbench</span>
+  </a>
+  <!-- Header Navbar: style can be found in header.less -->
+  <nav class="navbar navbar-static-top" role="navigation">
+    <!-- Sidebar toggle button-->
+    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+      <span class="sr-only">Toggle navigation</span>
+    </a>
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
+       <!-- User Account: style can be found in dropdown.less -->
+       
+        <li class="dropdown user user-menu" style="margin: 12px;">
+          
+            <img id="headerUserImg" src="${sessionScope.userPhoto}" class="user-image" alt="User Image" >
+            <span class="hidden-xs" id="headerUserName">${sessionScope.USERNAME}</span>
+          
+        </li>
+        <li>
+            <a href="#" data-toggle="control-sidebar" style="margin: 5px;"><i class="fa fa-gears"></i></a>
+          </li>
+        <!-- Control Sidebar Toggle Button -->
+      <!--   <li >
+          <a href="javascript:void(0)" onclick="return openHelp();" data-toggle="tooltip" title="Help" data-placement="bottom" style="margin: 5px;"><i class=" fa fa-question-circle" ></i></a>
+        </li> -->
+        <li>
+          <a href="${sessionScope.logoutURL}" data-toggle="tooltip" title="Logout" data-placement="bottom" style="margin: 5px;"><i class=" fa fa-sign-out" ></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

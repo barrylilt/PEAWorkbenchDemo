@@ -1,0 +1,67 @@
+<style>
+	#promoDateDia .modal-dialog{
+		width:575px;
+	}
+</style>
+<section class="content-header dataOverride">
+	<h1>
+		{{translate('ALIGN_DATE','Align Date')}}
+	</h1>
+	<ol class="breadcrumb">
+		<li>{{translate('MANAGE_DATA','Manage Data')}}</li>
+		<li class="active">{{translate('ALIGN_DATE','Align Date')}}</li>
+	</ol>
+</section>
+<!-- Main content -->
+<section >
+		<div class="col-md-12">
+			<div class="box box-primary ">
+				<div class="box-header with-border">
+					<h3 class="box-title">{{translate('DATA_FILTER','Data Filter')}}</h3>
+					<div class="box-tools pull-right">
+							
+						<button class="btn btn-primary" ng-click="applyFilter()">{{translate('APPLY_FILTER','Apply Filter')}}</button>
+						<button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+					</div>
+				</div>
+				<!-- /.box-header -->
+				<div class="box-body">
+					<div class="row dataOverride">
+						<div class="col-md-3">
+							<label>{{translate('CUSTOMER','Customer')}}</label> 
+							<select id="dataOverrideCustomerSelect" class="" size="2" multiple="multiple" style="width: 100%"></select>
+						</div>
+						<div class="col-md-3">
+							<label>{{translate('PRODUCT','Product')}}</label> 
+							<select id="dataOverrideProductSelect" class="" size="2" multiple="multiple" style="width: 100%"></select>
+						</div>
+						<div class="col-md-3">
+							<label id="dateLabel" >{{translate('DATE_RANGE','Date Range')}}</label>
+							<div class="input-group" style="width:100%">
+								<input type="text" id="dataOverrideDateRange" class="form-control pull-right" name="datefilter"  placeholder="Select Date Range"  style="width:100%">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+<div class="col-md-12">
+	<div class="box box-primary">
+		<div class="box-body" id="dataOverride">
+			<div id="promotionOveride" style="min-width: 310px; height: 250px; margin: 0 auto"></div>
+		</div>
+		<div class="box-body" id="dataOverride" style="margin:35px 60px 0 40px;">
+		  <div  align="right">
+		     <button class="btn btn-primary saveDateChange" id="updatePromoDate" >
+						<!-- <i class="glyphicon glyphicon-bell"></i> -->{{translate('UPDATE_PROMO_DATE','Update Promo Date')}}
+			</button>
+			 </div>
+			<div id="dateRangePromotion" style="min-width: 310px; height: 250px; margin: 0 auto"></div>
+		</div>
+	</div>
+</div>
+
+
+
+

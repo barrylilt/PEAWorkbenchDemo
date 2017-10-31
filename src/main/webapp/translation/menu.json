@@ -1,0 +1,168 @@
+{
+	"settings": {
+		"defaultActiveMenu": "home"
+	},
+	"home": {
+		"displayName": "Home",
+		"href": "dashboard",
+		"iClass": "fa fa-home",
+		"subMenu": {},
+		"templateUrl": "partials/dashboard.html",
+		"controller": "dashboardController"
+	},
+	"adminConfig": {
+		"displayName": "Administration",
+		"iClass": "fa fa-adn",
+		"subMenu": {
+		
+			"uploadDataFile": {
+				"displayName": "Upload Data",
+				"href": "fileUpload",
+				"iClass": "fa fa-upload",
+				"templateUrl": "partials/fileUpload.html",
+				"controller": "fileUploadController"
+			},
+			"manageLookupTables": {
+				"displayName": "Manage Lookup Data",
+				"href": "manageLookupTables",
+				"iClass": "fa fa-table",
+				"templateUrl": "partials/manageLookupTables.html",
+				"controller": "manageLookupTablesController"
+			},
+			"monitorDataFileStatus": {
+				"displayName": "View File Process Status",
+				"href": "monitorDataFileStatus",
+				"iClass": "fa fa-file-text-o",
+				"templateUrl": "partials/monitorDataFileStatus.html",
+				"controller": "monitorDataFileStatusController"
+			}
+		}
+	},
+	"manageData": {
+		"displayName": "Manage Data",
+		"iClass": "fa fa-th",
+		"subMenu": {
+			"viewHierarchies": {
+				"displayName": "Hierarchy Ref Data ",
+				"href": "viewHierarchies",
+				"iClass": "fa fa-sitemap",
+				"templateUrl": "partials/viewHierarchies.html",
+				"controller": "viewHierarchiesController"
+			},
+			
+			"mappingData": {
+				"displayName": "Harmonize Data",
+				"href": "mappingData",
+				"iClass": "fa fa-chain",
+				"templateUrl": "partials/mappingData.html",
+				"controller": "mappingDataController"
+			},
+			"dataQuality": {
+				"displayName": "View Data Quality Status",
+				"href": "dataQuality",
+				"iClass": "fa fa-check-circle",
+				"templateUrl": "partials/dataQuality.html",
+				"controller": "manageDataQualityRejectController"
+			},
+			"viewDataConfig": {
+				"displayName": "Configure Data Views",
+				"href": "viewDataConfig",
+				"iClass": "fa fa-gears",
+				"templateUrl": "partials/viewDataConfig.html",
+				"controller": "configureDataViewsController"
+			},
+			"viewExceptions": {
+				"displayName": "Manage Exceptions",
+				"href": "viewExceptions",
+				"iClass": "fa fa-eye-slash",
+				"templateUrl": "partials/viewExceptions.html",
+				"controller": "viewExceptionsController"
+			},
+			"viewPromotedProducts": {
+				"displayName": "View Promoted Products",
+				"href": "viewPromotedProducts",
+				"iClass": "fa fa-random",
+				"templateUrl": "partials/viewPromotedProducts.html",
+				"controller": "viewPromotedProductController"
+			},
+			"dataOverride": {
+				"displayName": "Align Date",
+				"href": "dataOverride",
+				"iClass": "fa fa-copy",
+				"templateUrl": "partials/dataOverride.html",
+				"controller": "dataOverrideController"
+			},
+			"viewDataAvailability": {
+				"displayName": "View Data Availability Stats",
+				"href": "viewDataAvailability",
+				"iClass": "fa fa-area-chart",
+				"templateUrl": "partials/viewDataAvailability.html",
+				"controller": "viewDataAvailabilityStatsController"
+			},
+			"manageBusinessRules": {
+				"displayName": "Manage Business Rules",
+				"href": "manageBusinessRules",
+				"iClass": "fa fa-legal",
+				"templateUrl": "partials/manageBusinessRules.html",
+				"controller": "manageBusinessRulesController"
+			}
+		}
+	},
+	"manageWorkflow": {
+		"displayName": "Manage Workflow",
+		"iClass": "fa fa-refresh",
+		"subMenu": {
+			"monitorJobLogs": {
+				"displayName": "Monitor Jobs",
+				"href": "monitorJobLogs",
+				"iClass": "fa fa-pencil-square-o",
+				"templateUrl": "partials/monitorJobLogs.html",
+				"controller": "monitorJobLogsController"
+			},			
+			"reprocessPromotion": {
+				"displayName": "Reprocess Promotions",
+				"href": "reprocessPromotion",
+				"iClass": "fa fa-repeat",
+				"templateUrl": "partials/reprocessPromotions.html",
+				"controller": "reprocessPromotionsController"
+			}			
+		}
+	},
+	
+	
+	"manageDatasets": {
+		"displayName": "Reporting",
+		"iClass": "fa fa-line-chart",
+		"subMenu": {
+			"createDatasets": {
+				"displayName": "Manage Datasets",
+				"href": "createDatasets",
+				"iClass": "fa fa-database",
+				"templateUrl": "partials/createDatasets.html",
+				"controller": "createDatasetsController"
+			},
+			"exportDatasets": {
+				"displayName": "Export Datasets",
+				"href": "exportDatasets",
+				"iClass": "fa fa-download",
+				"templateUrl": "partials/exportDatasets.html",
+				"controller": "exportDatasetsController"
+			},
+			"tableauReport ": {
+				"displayName": "Tableau Report",
+				"href": "tableauReport",
+				"iClass": "fa fa-download",
+				"templateUrl": "partials/tableauReport.html",
+				"controller": "tableauReportController"
+			}
+		}
+	},
+	"userProfile": {
+		"displayName": "User Profile",
+		"href": "userProfile",
+		"iClass": "fa fa-user",
+		"subMenu": {},
+		"templateUrl": "partials/userProfile.html",
+		"controller": "userProfileController"
+	}
+}

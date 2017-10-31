@@ -1,0 +1,115 @@
+[{
+	"text": "Product",
+	"children": [{
+		"text": "HPC CATEGORY (RL1)",
+		"children": [{
+			"text": "PERSONAL CARE1 (RL2)",
+			"children": [{
+				"text": "SKIN (RL3)",
+				"children": [{
+					"text": "SKIN CLEANSING (RL4)",
+					"children": [{
+						"text": "SKIN CLEANSING (RL5)",
+						"children": [{
+							"text": "SHOWER (RL6)",
+							"children": [{
+								"text": "SHOWER (RL7)",
+								"children": [{
+									"text": "SHOWER (RL8)",
+									"children": [{
+										"text": "LIQUID (RL9)",
+										"children": [{
+											"text": "LIQUID (RL10)",
+											"children": [{
+												"text": "DOVE E SHOW LIQ STD (RL11)",
+												"children": [{
+													"text": "DOVE SHLIQBOT 200ML (RL12)",
+													"children": [{
+														"text": "DOVE SHOWER LIQUID ULTRA CARIN (RL13)"
+													}, {
+														"text": "DOVE SHOWER LIQUID NOURISHING (RL13)"
+													}]
+												}]
+											}]
+										}]
+									}]
+								}]
+							}]
+						}]
+					}]
+				}]
+			},{
+				"text": "SKIN2 (RL32)",
+				"children": [{
+					"text": "SKIN CLEANSING (RL4)",
+					"children": [{
+						"text": "SKIN CLEANSING (RL5)",
+						"children": [{
+							"text": "SHOWER (RL6)",
+							"children": [{
+								"text": "SHOWER (RL7)",
+								"children": [{
+									"text": "SHOWER (RL8)",
+									"children": [{
+										"text": "LIQUID (RL9)",
+										"children": [{
+											"text": "LIQUID (RL10)",
+											"children": [{
+												"text": "DOVE E SHOW LIQ STD (RL11)",
+												"children": [{
+													"text": "DOVE SHLIQBOT 200ML (RL12)",
+													"children": [{
+														"text": "DOVE SHOWER LIQUID ULTRA CARIN (RL13)"
+													}, {
+														"text": "DOVE SHOWER LIQUID NOURISHING (RL13)"
+													}]
+												}]
+											}]
+										}]
+									}]
+								}]
+							}]
+						}]
+					}]
+				}]
+			}]
+		},{
+			"text": "PERSONAL CARE2 (RL2)",
+			"children": [{
+				"text": "SKIN (RL3)",
+				"children": [{
+					"text": "SKIN CLEANSING (RL4)",
+					"children": [{
+						"text": "SKIN CLEANSING (RL5)",
+						"children": [{
+							"text": "SHOWER (RL6)",
+							"children": [{
+								"text": "SHOWER (RL7)",
+								"children": [{
+									"text": "SHOWER (RL8)",
+									"children": [{
+										"text": "LIQUID (RL9)",
+										"children": [{
+											"text": "LIQUID (RL10)",
+											"children": [{
+												"text": "DOVE E SHOW LIQ STD (RL11)",
+												"children": [{
+													"text": "DOVE SHLIQBOT 200ML (RL12)",
+													"children": [{
+														"text": "DOVE SHOWER LIQUID ULTRA CARIN (RL13)"
+													}, {
+														"text": "DOVE SHOWER LIQUID NOURISHING (RL13)"
+													}]
+												}]
+											}]
+										}]
+									}]
+								}]
+							}]
+						}]
+					}]
+				}]
+			}]
+		}]
+	}]
+}]

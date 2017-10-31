@@ -1,0 +1,34 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<mapping class="com.saama.workbench.model.StImpl" />
+		<mapping class="com.saama.workbench.model.StStep" />
+		<mapping class="com.saama.workbench.model.StStepParameter" />
+		<mapping class="com.saama.workbench.model.StRun" />
+		<mapping class="com.saama.workbench.model.SblProductHierarchy" />
+		<mapping class="com.saama.workbench.model.SblCustomerHierarchy" />
+		<mapping class="com.saama.workbench.model.CustomerHierarchyBase" />
+		<mapping class="com.saama.workbench.model.ProductHierarchyBase" />
+		<mapping class="com.saama.workbench.model.CustomerStats" />
+		<mapping class="com.saama.workbench.model.AuditJobs" />
+		<mapping class="com.saama.workbench.model.DatasetMeta" />
+		<mapping class="com.saama.workbench.model.WbUserColumnConfig" />
+		<mapping class="com.saama.workbench.model.UserProfile" />
+		<mapping class="com.saama.workbench.model.PromotionFact" />
+		<mapping class="com.saama.workbench.model.BusinessRuleMeta" />
+		<mapping class="com.saama.workbench.model.AuthRole" />
+		<mapping class="com.saama.workbench.model.UserRole" />
+		<mapping class="com.saama.workbench.model.WbProduct" />
+		<mapping class="com.saama.workbench.model.WbProductClosure" />
+		<mapping class="com.saama.workbench.model.WbProductMaster" />
+		<mapping class="com.saama.workbench.model.WbProductTaxonomy" />
+		<mapping class="com.saama.workbench.model.WbCustomer" />
+		<mapping class="com.saama.workbench.model.WbCustomerClosure" />
+		<mapping class="com.saama.workbench.model.WbCustomerMaster" />
+		<mapping class="com.saama.workbench.model.WbCustomerTaxonomy" />
+		
+	</session-factory>
+</hibernate-configuration>

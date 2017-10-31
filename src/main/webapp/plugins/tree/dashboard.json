@@ -1,0 +1,88 @@
+{
+	"dataAvailabilityStatistics": [{
+		"month": "March 16",
+		"shipmentData": 32491981,
+		"EPOSData": 33855731,
+		"ratio": 98
+	}, {
+		"month": "April 16",
+		"shipmentData": 13322081,
+		"EPOSData": 11166961,
+		"ratio": 87
+	}, {
+		"month": "May 16",
+		"shipmentData": 31322031,
+		"EPOSData": 31166931,
+		"ratio": 78
+	}],
+	"jobRunStatistics": [{
+		"source": "Siebel",
+		"lastExecuted": "16-05-2016 11:12",
+		"pendingData": true
+	}, {
+		"source": "Sell-Out",
+		"lastExecuted": "16-05-2016 11:12",
+		"pendingData": false
+	}, {
+		"source": "Sell-In",
+		"lastExecuted": "16-05-2016 11:12",
+		"pendingData": true
+	}],
+	"dataQualityReport": {
+		"EYNTK": [{
+			"month": "May 16",
+			"clean": 121,
+			"action": 40
+		}, {
+			"month": "Jun 16",
+			"clean": 130,
+			"action": 39
+		}, {
+			"month": "Jul 16",
+			"clean": 112,
+			"action": 56
+		}, {
+			"month": "Aug 16",
+			"clean": 56,
+			"action": 29
+		}, {
+			"month": "Sep 16",
+			"clean": 71,
+			"action": 12
+		}, {
+			"month": "Oct 16",
+			"clean": 36,
+			"action": 34
+		}],
+		"OPSO": [{
+			"month": "Dec 16",
+			"clean": 82,
+			"action": 36
+		}, {
+			"month": "Jan 16",
+			"clean": 99,
+			"action": 49
+		}, {
+			"month": "Feb 16",
+			"clean": 111,
+			"action": 22
+		}, {
+			"month": "Mar 16",
+			"clean": 76,
+			"action": 14
+		}, {
+			"month": "Apr 16",
+			"clean": 67,
+			"action": 56
+		}, {
+			"month": "May 16",
+			"clean": 120,
+			"action": 24
+		}]
+
+	},
+	"datasets": {
+		"EYNTK": ["EYNTK N1 2016", "EYNTK N2 2016", "EYNTK N3 2016", "EYNTK N4 2016", "EYNTK N5 2016", "EYNTK N6 2016"],
+		"OPSO": ["OPSO N1 2016", "OPSO N2 2016", "OPSO N3 2016", "OPSO N4 2016", "OPSO N5 2016", "OPSO N6 2016"]
+	}
+}

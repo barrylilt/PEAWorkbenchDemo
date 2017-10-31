@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>{{translate('PEA_WORKBENCH_HELP','PEA Workbench Help')}}</title>
+</head>
+<style>
+ul.topNavBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3c8dbc;
+}
+
+ul.topNavBar  li {
+    float: left;
+}
+
+ul.topNavBar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topNavBar li a:hover:not(.active) {
+    background-color: #367fa9;
+}
+ul.topNavBar .active{
+	background-color: #367fa9;
+}
+</style>
+</head>
+<body>
+
+<ul class="topNavBar">
+  <li><a class="active" href="#home">{{translate('Home','Home')}}</a></li>
+  <li><a href="#news">{{translate('NEWS','News')}}</a></li>
+  <li><a href="#contact">{{translate('DOWNLOAD','Download')}}</a></li>
+  <li><a href="#about">{{translate('ABOUT','About')}}</a></li>
+</ul>
+
+<ul>
+  <li> {{translate('MAJOR_WORKBENCH_FUNCTIONS','Major Workbench Functions')}}
+  		<ul>
+  			<li><a href="default.asp">{{translate('MANAGE_DATA','Manage Data')}}</a></li>
+  			<li><a href="news.asp">{{translate('MONITOR_JOB_LOGS','Monitor Job Logs')}}</a></li>
+  			<li><a href="contact.asp">{{translate('VIEW_DATA','View Data')}}</a></li>
+  			<li><a href="about.asp">{{translate('MANAGE_DATASETS','Manage Datasets')}}</a></li>
+		</ul>
+	</li>
+  <li><a href="news.asp">{{translate('NEWS','News')}}</a></li>
+  <li><a href="contact.asp">{{translate('CONTACT','Contact')}}</a></li>
+  <li><a href="about.asp">{{translate('ABOUT','About')}}</a></li>
+</ul>
+
+</html>

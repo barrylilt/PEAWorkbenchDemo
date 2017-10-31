@@ -1,0 +1,95 @@
+<style>
+#save .modal-dialog {
+	width:900px !important;
+}
+</style>
+
+<!-- Content Header (Page header) -->
+<section class="content-header exportDatasets">
+	<h1>
+		{{translate('EXPORT_DATASETS','Export Datasets')}}
+		<!-- <small>Control panel</small> -->
+	</h1>
+	<ol class="breadcrumb">
+		<li>{{translate('REPORTING','Reporting')}}</li>
+		<li class="active">{{translate('EXPORT_DATASETS','Export Datasets')}}</li>
+	</ol>
+</section>
+<!-- Main content -->
+<section class="content">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-primary">
+				<div class="box-header with-border">
+					<h3 class="box-title">{{translate('DATA_FILTER','Data Filter')}}</h3>
+					<div class="box-tools pull-right">
+						<button class="btn btn-primary" id="report" ng-click="report()" style="display:none;">{{translate('REPORT','Report')}}</button>
+						<button class="btn btn-primary" ng-click="export()">{{translate('EXPORT','Export')}}</button>
+						<button class="btn btn-primary" ng-click="clearFilter()">{{translate('CLEAR_FILTER','Clear Filter')}}</button>
+						<button class="btn btn-primary" ng-click="applyFilter()">{{translate('APPLY_FILTER','Apply Filter')}}</button>
+						<button class="btn btn-box-tool" data-widget="collapse">
+							<i class="fa fa-minus"></i>
+						</button>
+					</div>
+					<!-- /.box-tools -->
+				</div>
+				<!-- /.box-header -->
+				<div class="box-body">
+				
+					<div class="row">	
+										
+						<div class="col-md-12 row" style="margin: 2px 2px 0px 14px;float: left;">
+							<div class="col-md-2 form-group">
+								<label for="dataset">{{translate('SELECT_DATASET','Select Dataset')}}</label> 
+								<select id="exportDatasetDatasetSelect" class="" size="2" multiple="multiple" style="width: 100%;"></select>
+							</div>
+							<div class="col-md-2 form-group">
+								<label>{{translate('STATUS','Status')}}</label> 
+								<select id="exportDatasetStatusSelect" class="" size="2" multiple="multiple" style="width: 100%;"></select>
+							</div>
+							<div class="col-md-2">
+								<label id="dateLabel" >{{translate('PROMOTION_START_DATE','Promotion Start Date')}}</label>
+								<div class="input-group" style="width:100%">
+									<input type="text" id="exportDatasetInstoredate" class="form-control pull-right" name="datefilter"  placeholder="Select Date Range"  style="width:100%" readonly>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<label id="bizRuleLabel">{{translate('EXCEPTION_RULES','Exception Rules')}}</label> 
+								<select id="exportDatasetBizRuleSelect" class="" size="2" multiple="multiple" style="width: 100%;"></select>
+							</div>
+							<div class="col-md-2">
+								<label>{{translate('CUSTOMER','Customer')}}</label> 
+								<select id="exportDatasetCustomerSelect" class="" size="2" multiple="multiple" style="width: 100%"></select>
+							</div>
+						</div>
+					</div>
+					<!--<div class="row">
+						
+						<div class="col-md-11 row" style="margin: 2px 2px 0px 14px;float: left;">
+							<div class="col-md-3">
+								<label>{{translate('CUSTOMER','Customer')}}</label> 
+								<select id="exportDatasetCustomerSelect" class="" size="2" multiple="multiple" style="width: 100%"></select>
+							</div>
+							  <div class="col-md-3">
+								<label>{{translate('CATEGORY','Category')}}</label> 
+								<select id="exportDatasetCategorySelect" class="" size="2" multiple="multiple" style="width: 100%"></select>
+							</div>
+							
+						</div>
+					</div>-->
+				</div>
+				<!-- /.box-body -->
+			</div>
+			<!-- /.box -->
+		</div>
+		<!-- /.col -->
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-primary">
+				<div class="box-body" id="ViewDatasets">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

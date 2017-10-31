@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="dist/css/dropzone.css">
+<script src="plugins/dropzone/dropzone.js"></script>
+<section class="content-header">
+	<h1>
+		{{translate('UPLOAD_DATA','Upload Data')}}
+
+		<!-- <small>Control panel</small> -->
+	</h1>
+	<ol class="breadcrumb">
+		<li>{{translate('ADMIN_CONFIG', 'Admin Config')}}</li>
+		<li class="active">{{translate('UPLOAD_DATA','Upload Data')}}</li>
+	</ol>
+</section>
+
+<!-- Main content -->
+<section class="content fileupload">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+				<h3 class="box-title">{{translate('UPLOAD_FILE','Upload File')}}</h3>
+			</div>
+
+			<form id="upload" action="javascript:;" enctype="multipart/form-data"
+				method="post">
+				<div class="box-body">
+					<div>
+						<div class="form-group">
+							<label for="sourcetype">{{translate('SOURCE_TYPE','Source Type')}}</label> 
+							<select name="sourceType" class="form-control" id="sourcetype">
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="fileNameFormat">{{translate('FILE_NAME_FORMAT','File Name Format')}}</label> 
+							<select name="fileNameFormat" class="form-control" id="fileNameFormat">
+								<option>SellOut_yyyyMMdd.txt</option>
+							</select>
+						</div>
+						<div class="form-group"></div>
+						<script type="text/javascript">
+							
+						</script>
+						<div class="box-footer">
+							<label for="fileselect">{{translate('FILE_TO_UPLOAD','File to upload')}}</label>
+						</div>
+						<div id="holder" class="dropzone"
+							style="height: 200px; line-height: 70px; text-align: center; padding: 0px;">
+						</div>
+					</div>
+					<br>
+					<div class="box-footer">
+						<button type="submit" ng-click="uploadFile()"
+							class="btn btn-primary pull-right" disabled>{{translate('UPLOAD_FILE','Upload File')}}</button>
+					</div>
+
+
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+</section>
